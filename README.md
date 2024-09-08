@@ -1,9 +1,6 @@
-# check-cycode
-check cycode exercise 
+### Security Note: Default Member Permissions Allow Repository Creation
 
-### Security Finding: Overly Permissive Repository Creation Permissions
-
-- **Description**: As a regular member of the "spring-waters" organization, I have the ability to create repositories. This permission is overly permissive and can lead to uncontrolled repository creation, accidental data leaks, or the introduction of insecure code.
-- **Severity**: Medium to High
-- **Impact**: If a member accidentally creates a public repository, it could expose sensitive information. Additionally, this could lead to disorganization within the repositories and difficulty managing security risks.
-- **Recommendation**: Limit repository creation permissions to admins or a designated group of trusted users. Regular members should only have read or write access, depending on their role.
+- **Description**: By default, members of the "spring-waters" organization have the ability to create repositories. While this aligns with GitHub's standard permission model, it introduces the potential risk of members unintentionally creating public repositories or repositories with insecure code.
+- **Severity**: Low to Medium
+- **Impact**: The ability for all members to create repositories could lead to accidental exposure of sensitive information or create repositories that do not follow the organization's security protocols.
+- **Recommendation**: It is recommended to restrict repository creation to admins or specific trusted members. Alternatively, implementing a **monitoring process** for newly created repositories can help ensure compliance with organizational security policies.
